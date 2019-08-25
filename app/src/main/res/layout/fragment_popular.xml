@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <LinearLayout
+
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/flcontent"
+            android:orientation="vertical">
+        <FrameLayout android:layout_width="match_parent"
+                     android:layout_height="670dp"
+                     android:id="@+id/contain1">
+            <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/RvPics"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+            </androidx.recyclerview.widget.RecyclerView>
+            <!--<ProgressBar android:layout_width="wrap_content"-->
+                         <!--android:layout_height="wrap_content"-->
+                         <!--android:layout_gravity="bottom|center"-->
+                         <!--android:visibility="invisible"-->
+                         <!--android:id="@+id/LoadingCircle"-->
+
+
+            <!--/>-->
+        </FrameLayout>
+
+
+        <FrameLayout android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_gravity="bottom"
+        >
+            <!--<com.google.android.material.bottomnavigation.BottomNavigationView-->
+            <!--android:id="@+id/nav_view"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:background="?android:attr/windowBackground"-->
+            <!--app:menu="@menu/bottom_nav_menu"/>-->
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                    android:id="@+id/nav_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="0dp"
+                    android:layout_marginStart="0dp"
+                    android:background="?android:attr/windowBackground"
+                    android:layout_gravity="bottom"
+                    app:labelVisibilityMode="labeled"
+                    app:layout_behavior="@string/hide_bottom_view_on_scroll_behavior"
+                    app:menu="@menu/bottom_nav_menu"/>
+        </FrameLayout>
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+

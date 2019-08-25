@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+    <Button
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/btnGenre"
+
+            xmlns:tools="http://schemas.android.com/tools"
+            tools:text="Button"
+            android:textColor="#FFF2E8"
+            android:textSize="10sp"
+
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:background="@drawable/buttonshape"
+            android:shadowColor="#A8A8A8"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="5"
+    />
+

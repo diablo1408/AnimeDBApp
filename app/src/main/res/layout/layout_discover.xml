@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/RlAnime"
+        android:orientation="vertical"
+
+
+
+
+        tools:context="com.example.animedbapp.MainActivity"
+>
+    <androidx.cardview.widget.CardView
+            android:layout_width="180dp"
+            android:layout_height="250dp"
+            app:cardElevation="2dp"
+            app:cardCornerRadius="5dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:id="@+id/CvImage"
+
+
+    >
+
+        <ImageView android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:id="@+id/ivPics"
+        />
+
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              tools:text="Title"
+              android:layout_below="@+id/CvImage"
+              android:textSize="16sp"
+              android:layout_marginLeft="8dp"
+              android:id="@+id/titleTv"
+              android:textColor="#FFFFFF"
+    />
+    <TextView android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Score"
+              android:layout_below="@id/titleTv"
+              android:textColor="#FFFFFF"
+              android:id="@+id/Scoretext"
+              android:layout_marginLeft="8dp"
+              android:layout_marginTop="8dp"
+              android:layout_marginStart="8dp"
+              android:layout_marginEnd="8dp"
+              android:layout_marginBottom="8dp"/>
+    <Button android:layout_width="52dp"
+            android:layout_height="19dp"
+            android:id="@+id/btnScore"
+            android:background="@drawable/score_buttonshape"
+            tools:text="8.9"
+            android:layout_below="@id/titleTv"
+            android:layout_toRightOf="@id/Scoretext"
+            android:textColor="#FFFFFF"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="9dp"/>
+    <TextView android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_toRightOf="@+id/btnScore"
+              android:layout_below="@id/titleTv"
+              tools:text="Status"
+              android:textSize="10sp"
+              android:textColor="#FFFFFF"
+              android:layout_marginLeft="21dp"
+              android:id="@+id/statusDTv"
+
+              android:layout_marginTop="11dp"/>
+
+
+</RelativeLayout>
+

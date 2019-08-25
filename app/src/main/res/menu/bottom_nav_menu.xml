@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+            android:id="@+id/navigation_discover"
+            android:icon="@drawable/ic_explore_black_24dp"
+            android:title="@string/title_dashboard"/>
+
+
+    <item
+            android:id="@+id/navigation_seasons"
+            android:icon="@drawable/ic_swap_vertical_circle_black_24dp"
+            android:title="@string/title_seasons"/>
+    <item
+            android:id="@+id/navigation_bookmarks"
+            android:icon="@drawable/ic_collections_bookmark_black_24dp"
+            android:title="@string/title_bookmarks"/>
+    <item
+            android:id="@+id/navigation_account"
+            android:icon="@drawable/ic_account_circle_black_24dp"
+            android:title="@string/title_account"/>
+
+</menu>
