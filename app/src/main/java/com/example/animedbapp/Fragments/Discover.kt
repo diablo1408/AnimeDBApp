@@ -2,6 +2,7 @@ package com.example.animedbapp.Fragments
 
 
 import android.content.Intent
+import android.icu.lang.UCharacter.GraphemeClusterBreak.T
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -9,6 +10,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.AbsListView
+import android.widget.Toast
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.animedbapp.Adapters.AnimeAdapter
@@ -134,7 +136,10 @@ class Popular : Fragment() {
 
         pApi.getPICS(page,type).enqueue(object : Callback<DiscoverAnime> {
             override fun onFailure(call: Call<DiscoverAnime>, t: Throwable) {
-                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+
+                Toast.makeText(context,"Try Again No Network Available",Toast.LENGTH_LONG).show()
+
+
             }
 
             override fun onResponse(call: Call<DiscoverAnime>, response: Response<DiscoverAnime>) {

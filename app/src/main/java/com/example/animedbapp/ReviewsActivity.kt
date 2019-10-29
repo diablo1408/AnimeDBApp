@@ -27,7 +27,7 @@ class ReviewsActivity : AppCompatActivity() ,CoroutineScope{
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_reviews)
-        setSupportActionBar(toolbarBookmarks)
+        setSupportActionBar(toolbarReviews)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         RvReviewsList.layoutManager=LinearLayoutManager(this)
         RvReviewsList.adapter=reviewAdapter

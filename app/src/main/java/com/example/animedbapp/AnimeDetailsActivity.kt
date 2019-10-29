@@ -121,14 +121,18 @@ class AnimeDetailsActivity : AppCompatActivity(), CoroutineScope {
         scrollableView.setOnScrollChangeListener { v, scrollX, scrollY, oldScrollX, oldScrollY ->
             if(scrollY>0){
                 floating_action_button.hide()
-                floating_action_buttonR.visibility=View.INVISIBLE
+                floating_action_button1.visibility=View.INVISIBLE
                 floating_action_button2.visibility=View.INVISIBLE
+                floating_action_button3.visibility=View.INVISIBLE
+
                 Log.d("scroll","this is hidden")
+
             }
             else {
                 floating_action_button.show()
-                floating_action_buttonR.visibility=View.VISIBLE
+                floating_action_button1.visibility=View.VISIBLE
                 floating_action_button2.visibility=View.VISIBLE
+                floating_action_button3.visibility=View.VISIBLE
                 Log.d("scroll2","this is show")
             }
         }
@@ -214,8 +218,13 @@ class AnimeDetailsActivity : AppCompatActivity(), CoroutineScope {
 
 
         }
-        floating_action_buttonR.setOnClickListener{
+        floating_action_button1.setOnClickListener{
              val intent=Intent(this@AnimeDetailsActivity,ReviewsActivity::class.java)
+            intent.putExtra("malId",malId)
+            startActivity(intent)
+        }
+        floating_action_button3.setOnClickListener{
+          val intent=Intent(this@AnimeDetailsActivity,WatchActivity::class.java)
             intent.putExtra("malId",malId)
             startActivity(intent)
         }
@@ -225,16 +234,18 @@ class AnimeDetailsActivity : AppCompatActivity(), CoroutineScope {
     private fun showFABMenu(){
     isFABOpen=true
 
-    floating_action_buttonR.animate().translationY(-resources.getDimension(R.dimen.standard_55))
-    floating_action_button2.animate().translationY(-resources.getDimension(R.dimen.standard_105))
+    floating_action_button1.animate().translationY(-resources.getDimension(R.dimen.standard_55))
+    floating_action_button2.animate().translationY(-resources.getDimension(R.dimen.standard_105) )
+        floating_action_button3.animate().translationY(-resources.getDimension(R.dimen.standard_155) )
 //    fab3.animate().translationY(-resources.getDimension(R.dimen.standard_155))
 }
 
 private fun closeFABMenu(){
     isFABOpen=false
 
-    floating_action_buttonR.animate().translationY(0F)
+    floating_action_button1.animate().translationY(0F)
     floating_action_button2.animate().translationY(0F)
+    floating_action_button3.animate().translationY(0F )
 
 //    fab3.animate().translationY(0)
 }
