@@ -1,5 +1,4 @@
-# AnimeDBApp
-MyAnimeList App
+# MyAnimeList App
 MyAnimeList app is anime  cataloguing android application .It provides users a list like system of various show so they can bookmark their favourite shows. It facilitates users to find similar types of show and provide a large database.
 It’s uses MyAnimeList website database which is shown on the app using MyAnimeList API which provides information in JSON then the information is  shown in  the app in a well-defined manner.
 For Signup  Google firebase authentication service is used which provides a email and password based account for app and for storing users bookmarked shows details ituses firebaseRealtime database which is a NoSQL database.
